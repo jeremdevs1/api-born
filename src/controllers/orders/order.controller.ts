@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
-import { request } from "http";
 import { getConnection, getRepository } from "typeorm";
-import { User } from "../entity/User";
-import { Order } from "../entity/Order";
-import { Meal } from "../entity/Meal";
-import { Aliment } from "../entity/Aliment";
+import { User } from "../../database/entity/user.entity";
+import { Order } from "../../database/entity/order.entity";
+import { Meal } from "../../database/entity/meal.entity";
+import { Aliment } from "../../database/entity/aliment.entity";
+
+
 export const order = async (req: Request, res: Response) => {
   const { order, userId } = req.body;
   var meals: Meal[] = [];

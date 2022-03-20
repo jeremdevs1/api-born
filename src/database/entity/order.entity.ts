@@ -2,14 +2,14 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   ManyToOne,
-  OneToMany,
   Column,
   JoinTable,
   ManyToMany,
 } from "typeorm";
-import { User } from "./User";
 
-import { Meal } from "./Meal";
+import { User } from "./user.entity";
+import { Meal } from "./meal.entity";
+
 @Entity()
 export class Order {
   @PrimaryGeneratedColumn()
